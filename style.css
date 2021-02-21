@@ -1,0 +1,163 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: black;
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+
+.page {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url(background.jpg);
+  filter: grayscale(100%);
+  height: 90vh;
+  background: rgb(2, 0, 105);
+  width: 100vw;
+  padding-top: 1px;
+}
+
+.page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  background-image: url(background.jpg);
+  background-size: cover;
+
+  animation: fadeIn 1s forwards;
+  animation-delay: 0s;
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 0.5;
+  }
+}
+
+nav {
+  background-color: #2A2A2A;
+  height: 12vh;
+  position: fixed;
+  top: 0;
+  z-index: 9000;
+}
+
+.left-menu {
+  width: 100vw;
+  height: 5vh;
+}
+
+.home-nav {
+  margin-left: 27vw;
+}
+
+.left-menu li {
+  display: inline;
+  float: left;
+  margin: 1vw;
+  display: block;
+  font-weight: 600;
+  padding-right: 5%;
+  padding-top: 4vh;
+}
+
+.left-menu a {
+  text-decoration: none;
+  color: grey;
+  font-family: sans-serif;
+}
+
+a:hover {
+  color: blueviolet;
+}
+
+h2 {
+  font-size: 40px;
+  text-align: center;
+}
+
+p {
+  font-size: 15px;
+}
+
+.landing h1 {
+  opacity: 0;
+  color: white;
+  text-align: center;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.8);
+  animation: landing-text 1.5s forwards;
+}
+
+@keyframes landing-text {
+  0% {
+    font-size: 1vmin;
+    margin-top: 10vh;
+  }
+  100% {
+    opacity: 1;
+    font-size: 5vmin;
+    margin-top: 27vh;
+  }
+}
+
+.landing-word h1 {
+  background-color: white;
+}
+
+.about {
+  height: 75vh;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 50px;
+  align-items: center;
+  padding: 0 50px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h2 {
+  font: 100px;
+}
+
+text-header {
+  margin-bottom: 10px;
+}
+
+.about img {
+  width: 100%;
+}
+
+.footer {
+  background-color: #2A2A2A;
+  text-align: center;
+}
+
+h5 {
+    padding-top: 2.5vh;
+    padding-bottom: 2.5vh;
+    color: gray;
+}
+
+@media only screen and (max-width: 550px) {
+  .landing h1 {
+    font-size: 250%;
+  }
+}
+
+.text {
+    margin-left: 32vw;
+}
+
+.landing img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
+}
